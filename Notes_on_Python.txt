@@ -1,4 +1,4 @@
-dictionary datastructure in Python
+Dictionary datastructure in Python
 
 key value pair 
 dict()
