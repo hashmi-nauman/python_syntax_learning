@@ -1,6 +1,8 @@
 This file is basically a revision file for me to recall my self that what did i learn in the past
 Dictionary datastructure in Python.
 
+I need to add new content inside this file regularly
+
 key value pair 
 dict()
 get("somekey")
