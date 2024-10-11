@@ -23,7 +23,7 @@
 #         substrings += uppercase[inn_count]
 #     substrings_list.append(substrings)
 
-# *** ----- Better solution ----- ***
+# *** ----- Optimized or Better solution ----- ***
     
 #uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 #ascii_hash_values = dict()
