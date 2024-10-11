@@ -1,0 +1,195 @@
+dictionary datastructure in Python
+
+key value pair 
+dict()
+get("somekey")
+keys()
+values()
+items()
+if "somekey" in some dictionary
+update()
+pop("somekey")
+popitem()
+del thisdic("somekey")
+copy() === new_dict = dict(old_dict)
+fromkeys()
+
+
+Error Handling:
+
+- If some condition :
+	pass
+  else:
+	raise NameError ('with or without custome message') OR raise Exception()
+But the problem with it is it will hault the program from further executing, so the solution is try-except clauses.
+
+
+- try:
+	pass
+
+  except:
+	print("display some message")
+
+captruing a specic exception
+
+-try:
+	pass
+
+except TypeError as exceptionObject:
+
+	print("custom message")
+	print(exceptionObject)
+
+
+Handling Multiple Exceptions
+try:
+    # Some code to try!
+except (NameError, ZeroDivisionError) as e:
+    print('We hit an Exception!')
+    print(e)
+
+OR for exceptions to be handled differently
+
+try:
+    # Some code to try!
+except NameError:
+    print('We hit a NameError Exception!')
+except KeyError:
+    print('We hit a TypeError Exception!')
+except Exception:
+    print('We hit an exception that is not a NameError or TypeError!')
+
+
+The else Clause
+try:
+  check_password()
+except ValueError:
+  print('Wrong Password! Try again!')
+else:
+  login_user()
+  # 20 other lines of imaginary code
+
+The finally clause
+
+With try/except/else, we’ve seen how to run certain code when an exception occurs and other code when it does not. There is also a way to execute code regardless of whether an exception occurs - the finally clause.
+
+try:
+  check_password()
+except ValueError:
+  print('Wrong Password! Try again!')
+else:
+  login_user()
+  # 20 other lines of imaginary code
+finally:
+  load_footer()
+
+
+User-defined Exceptions
+So far we have seen how to raise and manage built-in exceptions. In most programs, using built-in exceptions won’t always be the most detailed way to describe an error occurring. What if we could create custom exceptions that are more specific to a program or module? Well, Python gives us the ability to create user-defined exceptions.
+
+User-defined exceptions are exceptions that we create to allow for better readability in our program’s 
+Preview: Docs The two types of errors in Python are syntax errors and exceptions. Exceptions may arise even if the code is syntactically correct.
+errors
+. The core syntax looks like this:
+
+class CustomError(Exception):
+    pass
+
+def schedule_delivery(distance_from_store):
+    if distance_from_store > 10:
+        raise LocationTooFarError
+    else:
+        print('Scheduling the delivery...')
+
+
+Customizing User-defined Exceptions
+class LocationTooFarError(Exception):
+   def __init__(self, distance):
+       self.distance = distance
+       
+   def __str__(self):
+        return 'Location is not within 10 km: ' + str(self.distance)
+
+def schedule_delivery(distance_from_store):
+    if distance_from_store > 10:
+        raise LocationTooFarError(distance_from_store)
+    else:
+        print('Scheduling the delivery...')
+
+
+Unit Testing
+
+assert (function(arg) == some_value, 'your error message')
+
+Python Testing module: unittest
+
+class yourTestclass (unittest.TestCase):
+	def testFun1 (self):
+		self.AssertEqual(function(arg), expected_value, 'optional message')
+
+	def testFun2 (self):
+		self.AssertEqual(function(arg), expected_value, 'optional message')
+
+
+	def testFun2 (self):
+		self.AssertEqual(function(arg), expected_value, 'optional message')
+
+unittest.main()
+
+
+
+
+Assert Methods:
+1- assertEqual()
+2- assertIn()
+3- assertTrue()
+4- assertLess()
+5- assertAlmostEqual()
+6- assertRaises()
+7- assertWarns()
+
+
+Test Parameterization 
+
+-> for num in [val1, val2, val3]: 
+	with subTest(num):
+		expected_result = num * 10
+                message = 'Expected times_ten(' + str(num) + ') to return ' + str(expected_result)
+                self.assertEqual(funct(num), expected_result, message)
+		
+
+
+Test Fixture
+
+@classmethod
+def setUpClass(cls)
+
+@classmethod
+def tearDownClass(cls)
+
+
+
+string
+
+var = 'A' * 1000
+ord() # to get the ASCII Code of a character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
