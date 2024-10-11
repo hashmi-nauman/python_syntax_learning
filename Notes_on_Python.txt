@@ -1,4 +1,5 @@
-Dictionary datastructure in Python
+This file is basically a revision file for me to recall my self that what did i learn in the past
+Dictionary datastructure in Python.
 
 key value pair 
 dict()
