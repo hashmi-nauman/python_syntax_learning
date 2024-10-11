@@ -46,28 +46,28 @@
 # #print(ascii_hash_values)
 
 
-# import itertools
+import itertools
 
-# uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-# ascii_product = dict()
-# seen = dict()
-# dup_dict = dict()
+uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ascii_product = dict()
+seen = dict()
+dup_dict = dict()
 
-# combination_of_twos = list(itertools.combinations(uppercase, 2))
-# combination_of_twos_string = [''.join(combo) for combo in combination_of_twos]
-# #print(combination_of_twos_string)
+combination_of_twos = list(itertools.combinations(uppercase, 2))
+combination_of_twos_string = [''.join(combo) for combo in combination_of_twos]
+#print(combination_of_twos_string)
 
-# for string in combination_of_twos_string:
-#     product = 1
-#     for c in string:
-#         product *= ord(c)
-#     ascii_product.update({string: product})
+for string in combination_of_twos_string:
+    product = 1
+    for c in string:
+        product *= ord(c)
+    ascii_product.update({string: product})
 
-# for e_key, e_val in ascii_product.items():
-#     if e_val in seen:
-#         #if e_val not in dup_dict:
-#             dup_dict.update({e_key:e_val})
-#     else:
-#         seen.update({e_key:e_val})
-# print(dup_dict)
+for e_key, e_val in ascii_product.items():
+    if e_val in seen:
+        #if e_val not in dup_dict:
+            dup_dict.update({e_key:e_val})
+    else:
+        seen.update({e_key:e_val})
+print(dup_dict)
 
